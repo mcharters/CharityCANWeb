@@ -1,0 +1,465 @@
+/*-----------------------------------------------------------Main styling----------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', 'Roboto', 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+svg > g:last-child > g:last-child {
+    pointer-events: none
+}
+
+section, div {
+    overflow: hidden;
+}
+
+#triangle {
+    width: 100%;
+    height: 100px;
+}
+
+h3 {
+    font-size: 20px !important;
+}
+
+.scrollToTop{
+    width: 40px; 
+    height: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    opacity: 0.3;
+    display: none;
+    background: url('https://icon-icons.com/icons2/934/PNG/512/up-arrow-black-square-button-interface-symbol_icon-icons.com_72902.png') no-repeat 0px 0px/40px 40px;
+}
+.scrollToTop:hover{
+    opacity: 0.5;
+}
+
+/*-----------------------------------------------------------Header----------------------------------------------------------*/
+
+.navbar-brand {
+    font-size: 25px !important;
+    color: #00849b !important;
+}
+
+.navbar-brand-subtitle {
+    font-size: 20px !important;
+}
+
+.nav-link {
+    color: #00849b !important;
+}
+
+.nav-link:hover {
+    color: #00333C !important;
+}
+
+.logo {
+    margin-top: 4px;
+    width: 150px;
+}
+
+/*-----------------------------------------------------------Page 1----------------------------------------------------------*/
+
+#page1 {
+    margin-top: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 50%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    width: 100% !important;
+    height: 80% !important;
+}
+
+/*-----------------------------------------------------------Page 2----------------------------------------------------------*/
+
+.triangle1 {
+    height: 100px;
+    width: 100%;
+    fill: #00849b;
+/*    margin-bottom: -6px;*/
+}
+
+.triangle2 {
+    height: 100px;
+    width: 100%;
+    fill: #00849b;
+}
+
+#page2 {
+    width: 100%;
+    height: 500px;
+    background-color: #00849b;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#page2 h1, #page2 h2, #page2 h3 {
+    color: white;
+}
+
+@media only screen and (max-width: 576px) {
+    #page2 {
+        height: 900px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    #page2 {
+        height: 850px;
+    }
+}
+
+/*-----------------------------------------------------------Page 3----------------------------------------------------------*/
+
+#page3 {
+    height: 500px;
+}
+
+#page3 p {
+    text-align: center;
+    margin-top: 33%;
+    color: #003BD1;
+}
+
+#large-dot {
+    position: relative;
+    background-color: #86C7EE;
+    border-radius: 50%;
+    display: inline-block;
+
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+#large-dot:hover {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.dot1 {
+    top: 15%;
+    left: 10%;
+    width: 175px;
+    height: 175px;
+    font-size: 20px;
+}
+
+.dot2 {
+    top: 50%;
+    left: 20%;
+    width: 150px;
+    height: 150px;
+    font-size: 15px;
+}
+
+.dot3 {
+    top: 10%;
+    left: 35%;
+    width: 200px;
+    height: 200px;
+    font-size: 25px;
+}
+
+.dot4 {
+    top: 50%;
+    left: 40%;
+    width: 125px;
+    height: 125px;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .dot1 {
+        left: 5%;
+    }
+    .dot2 {
+        left: 10%;
+    }
+    .dot3 {
+        left: 20%;
+    }
+    .dot4 {
+        left: 30%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .dot1 {
+        left: 5%;
+    }
+    .dot2 {
+        left: 5%;
+    }
+    .dot3 {
+        left: 10%;
+    }
+    .dot4 {
+        left: 10%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    #page3 {
+        height: 900px;
+        margin-top: 100px;
+    }
+    .dot1, .dot2, .dot3, .dot4 {
+        top: 0;
+        left: 0;
+        width: 175px;
+        height: 175px;
+        font-size: 15px;
+        margin-left: 40%;
+        margin-right: 40%;
+        margin-top: 40px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #page3 {
+        height: 900px;
+        margin-top: 100px;
+    }
+    .dot1, .dot2, .dot3, .dot4 {
+        top: 0;
+        left: 0;
+        width: 175px;
+        height: 175px;
+        font-size: 15px;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 40px;
+        display: block;
+    }
+}
+
+/*-----------------------------------------------------------Page 4----------------------------------------------------------*/
+
+.triangle3 {
+    height: 100px;
+    width: 100%;
+    fill: #00849b;
+    margin-bottom: -6px;
+}
+
+.triangle4 {
+    height: 100px;
+    width: 100%;
+    fill: #00849b;
+}
+
+#page4 {
+    width: 100%;
+    height: 700px;
+    background-color: #00849b;
+}
+
+#donutchart1, #donutchart2, #donutchart3 {
+    width: 700px;
+    height: 500px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-left: 32%;
+}
+
+@media only screen and (max-width: 576px) {
+    #donutchart1, #donutchart2, #donutchart3 {
+        zoom: 0.5;
+        margin-left: 26%;
+    }
+    #page4 {
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    #donutchart1, #donutchart2, #donutchart3 {
+        zoom: 0.5;
+    }
+    #page4 {
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #donutchart1, #donutchart2, #donutchart3 {
+        zoom: 0.7;
+        margin-left: 30%;
+    }
+    #page4 {
+        height: 450px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #donutchart1, #donutchart2, #donutchart3 {
+        margin-left: 28%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #donutchart1, #donutchart2, #donutchart3 {
+        margin-left: 35%;
+    }
+}
+
+.buttons {
+    margin-left: 25%;
+}
+
+.panelControlBtn {
+    width: 20%;
+    height: 10px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #EDEDED;
+    color: white;
+    border: none;
+}
+
+.panelControlBtn:hover {
+    opacity: 0.5;
+}
+
+.buttons span {
+    text-align: center;
+    color: #EDEDED;
+    width: 20%;
+    height: 20px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/*-----------------------------------------------------------Page 5----------------------------------------------------------*/
+
+#page5 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+    #page5 {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}
+
+#page5 object {
+    width: 100%;
+    height: 750px;
+}
+
+#page5 h1 {
+    margin-left: 5%;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+#page5 div {
+    overflow-x: visible !important;
+}
+
+#myTable {
+    font-family: 'Rubik', 'Roboto', 'Trebuchet MS', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+}
+
+#myTable td, #myTable th {
+    font-family: 'Rubik', 'Roboto', 'Trebuchet MS', sans-serif;
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+
+#myTable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#myTable tr:hover {
+    background-color: #ddd;
+}
+
+#myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 20px;
+    text-align: left;
+    background-color: #00849b;
+    color: white;
+}
+
+label, .dataTables_info, .paginate_button, select {
+    font-family: 'Rubik', 'Roboto', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+}
+
+input[type=search], select {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Rubik', 'Roboto', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+}
+
+select {
+    width: 90px;
+}
+
+input[type=search]{
+    width: 250px;                
+}
+
+/*-----------------------------------------------------------Footer----------------------------------------------------------*/
+
+#footer {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #F8F8F8;
+}
+
+#footer a {
+    color: #777777;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-copy {
+    color: #AAAAAA;
+    font-size: 14px;
+}

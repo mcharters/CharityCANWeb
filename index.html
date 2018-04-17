@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>CharityCAN Top 1000</title>
+        <link rel="icon" href="https://charitycan.ca/wp-content/uploads/2017/08/charitycan-favicon.png">
+        
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <!--DataTables library adds filtering to table-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+        <!--Font Awesome library for some icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+            <a href="https://charitycan.ca/" target="_blank"><img class="logo" src="https://charitycan.ca/wp-content/uploads/2017/08/charitycan-logo.svg"></a>&nbsp;&nbsp;
+            <a class="navbar-brand" href="#">Canada's Top 1000 Charities</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-md-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page1">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page2">Category Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page3">Stats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page4">Donut Charts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page5">Tables</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <section id='page1'>
+            <h1>Top 1000 Charities</h1>
+            <div class="google-maps">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1S_voBgKQ05ib1ucZnEaIbrRVaRZgLR2_" frameborder="0" style="border:0"></iframe>
+            </div>
+        </section>
+        
+        <div id="triangle">
+            <svg class="triangle1" viewBox="0 0 100 100"  preserveAspectRatio="none">
+                <polygon points="0,0 100,100 0,100"/>
+            </svg>
+        </div>
+        
+        <section id='page2'>
+            <div class="category-stats">
+                <h1 align="center">Category Stats</h1>
+
+                <row class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center img-responsive float-right">
+                    <h2>2017 - 2016 Tax Gifts</h2>
+                    <h3> The Top 1000 Charities got CA$15.7 billions in Tax-Receipted Gifts in 2016 and 2017</h3>
+                    <div id="barchart1" class="text-center"></div> 
+                </row>
+
+                <row class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center img-responsive float-left">
+                    <h2>Number of Charities per Category</h2>
+                    <h3>Around 400K people work directly or indirectly for the Top 1000 Charities</h3>
+                    <div id="piechart1" class="text-center"></div>
+                </row>
+            </div>
+        </section>
+        
+        <div id="triangle">
+            <svg class="triangle2" viewBox="0 0 100 100"  preserveAspectRatio="none">
+                <polygon points="100,0 100,100 0,0"/>
+            </svg>
+        </div>
+        
+        <section id='page3'>
+            <span id="large-dot" class="dot1"><p>45.8 B<br>Revenue</p></span>
+            <span id="large-dot" class="dot2"><p>42.2 B<br>Total Expenditures</p></span>
+            <span id="large-dot" class="dot3"><p>113.3 B<br>Net Assets</p></span>
+            <span id="large-dot" class="dot4"><p>7.4 B<br>Tax-Receipted Gifts</p></span>
+        </section>
+        
+        <div id="triangle">
+            <svg class="triangle3" viewBox="0 0 100 100"  preserveAspectRatio="none">
+                <polygon points="100,100 100,0 0,100"/>
+            </svg>
+        </div>
+        
+        <section id='page4'>
+            <div class='donut-charts'>
+                <div class="donutchart" id="donutchart1"></div>
+                <div class="donutchart" id="donutchart2"></div>
+                <div class="donutchart" id="donutchart3"></div>
+
+
+                <div class='buttons'>
+                    <button class="panelControlBtn" data-id="1"></button>
+                    <button class="panelControlBtn" data-id="2"></button>
+                    <button class="panelControlBtn" data-id="3"></button>
+                    <br>
+                    <span class="hover1">Expenditures</span>
+                    <span class="hover2">Net Gain/Loss</span>
+                    <span class="hover3">Salaries and Wages</span>
+                </div>
+            </div>
+        </section>
+        
+        <div id="triangle">
+            <svg class="triangle4" viewBox="0 0 100 100"  preserveAspectRatio="none">
+                <polygon points="0,0 100,0 0,100"/>
+            </svg>
+        </div>
+        
+        <section id="page5">
+            <h1>Top 1000 Charities in Canada</h1>
+            <object type="text/html" data="table.html"></object>
+        </section>
+        
+        <section id="footer">
+            <div class="footer-links">
+                <a href="https://charitycan.ca/about/">About</a> |
+                <a href="https://charitycan.ca/contact/">Contact</a> |
+                <a href="https://charitycan.ca/terms/">Terms of Use</a> |
+                <a href="https://charitycan.ca/privacy/">Privacy Policy</a>
+            </div>
+            
+            <p class="footer-copy">&copy; CharityCAN 2018. All Rights Reserved.</p>
+        </section>
+        
+        <a href="#" class="scrollToTop"></a>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!--Loads Google Chart library-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <!--Loads DataTables library-->
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+        <script src="main.js"></script>
+        <!--Loads ScrollReveal library-->
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    </body>
+</html>
