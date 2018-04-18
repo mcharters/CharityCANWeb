@@ -27,7 +27,9 @@ $(document).ready(() => {
             backgroundColor: 'transparent',
             colors: ['#005d6d', '#38a9b9'],
             legend: {
-                textStyle: {color: 'white', fontSize: 12}
+                textStyle: {color: 'white', fontSize: 12},
+                position: 'top',
+                alignment:'center'
             },
             hAxis: {
                 textStyle:{color: '#FFF'}

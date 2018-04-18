@@ -87,13 +87,22 @@ h3 {
     height: 80% !important;
 }
 
+@media only screen and (max-width: 576px) {
+    #page1 {
+        margin-top: 150px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .google-maps {
+        height: 400px;
+    }
+}
 /*-----------------------------------------------------------Page 2----------------------------------------------------------*/
 
 .triangle1 {
     height: 100px;
     width: 100%;
     fill: #00849b;
-/*    margin-bottom: -6px;*/
 }
 
 .triangle2 {
@@ -224,7 +233,6 @@ h3 {
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     #page3 {
         height: 900px;
-        margin-top: 100px;
     }
     .dot1, .dot2, .dot3, .dot4 {
         top: 0;
@@ -242,7 +250,6 @@ h3 {
 @media only screen and (max-width: 576px) {
     #page3 {
         height: 900px;
-        margin-top: 100px;
     }
     .dot1, .dot2, .dot3, .dot4 {
         top: 0;
@@ -290,11 +297,23 @@ h3 {
 
 @media only screen and (max-width: 576px) {
     #donutchart1, #donutchart2, #donutchart3 {
-        zoom: 0.5;
-        margin-left: 26%;
+        zoom: 0.4;
+        margin-left: 30%;
     }
     #page4 {
-        height: 350px;
+        height: 300px;
+    }
+    .buttons span {
+        font-size: 8px;
+        height: 40px !important;
+        width: 23% !important;
+    }
+    .buttons {
+        margin-left: 23% !important;
+    }
+
+    .panelControlBtn {
+        width: 23% !important;
     }
 }
 
@@ -305,6 +324,10 @@ h3 {
     #page4 {
         height: 350px;
     }
+    .buttons span {
+        font-size: 12px;
+        height: 40px !important;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -314,6 +337,9 @@ h3 {
     }
     #page4 {
         height: 450px;
+    }
+    .buttons span {
+        font-size: 12px;
     }
 }
 
@@ -352,7 +378,7 @@ h3 {
     text-align: center;
     color: #EDEDED;
     width: 20%;
-    height: 20px;
+    height: 25px;
     display: inline-block;
     overflow: hidden;
 }
