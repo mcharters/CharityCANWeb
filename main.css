@@ -123,9 +123,24 @@ h3 {
     color: white;
 }
 
+#page2 h2 {
+    font-size: 25px;
+}
+
+#page2 h3 {
+    font-size: 18px !important;
+}
+
 @media only screen and (max-width: 576px) {
     #page2 {
-        height: 900px;
+        height: 800px;
+    }
+    #page2 h2 {
+        font-size: 18px;
+    }
+
+    #page2 h3 {
+        font-size: 13px !important;
     }
 }
 
@@ -301,7 +316,7 @@ h3 {
         margin-left: 30%;
     }
     #page4 {
-        height: 300px;
+        height: 350px;
     }
     .buttons span {
         font-size: 8px;
