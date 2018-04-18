@@ -87,17 +87,6 @@ h3 {
     height: 80% !important;
 }
 
-@media only screen and (max-width: 576px) {
-    #page1 {
-        margin-top: 150px;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .google-maps {
-        height: 500px;
-    }
-}
-
 /*-----------------------------------------------------------Page 2----------------------------------------------------------*/
 
 .triangle1 {
@@ -302,7 +291,7 @@ h3 {
 @media only screen and (max-width: 576px) {
     #donutchart1, #donutchart2, #donutchart3 {
         zoom: 0.5;
-        margin-left: 22%;
+        margin-left: 26%;
     }
     #page4 {
         height: 350px;
