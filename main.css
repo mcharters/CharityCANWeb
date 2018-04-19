@@ -275,7 +275,7 @@ h3 {
     font-size: 28px;
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 2000px) {
+@media only screen and (min-width: 1600px) and (max-width: 2650px) {
     .dot1 {
         left: 15%;
     }
@@ -297,25 +297,47 @@ h3 {
     }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+@media only screen and (min-width: 1320px) and (max-width: 1600px) {
     .dot1 {
-        left: 15%;
+        left: 6%;
     }
     .dot2 {
-        left: 15%;
+        left: 13%;
     }
     .dot3 {
-        left: 25%;
+        left: 16%;
     }
     .dot4 {
-        left: 25%;
+        left: 18%;
     }
     
     .dot5 {
-        left: 35%;
+        left: 24%;
     }
     .dot6 {
-        left: 35%;
+        left: 28%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1320px) {
+    .dot1 {
+        left: 4%;
+    }
+    .dot2 {
+        left: 8%;
+    }
+    .dot3 {
+        left: 10%;
+    }
+    .dot4 {
+        left: 10%;
+    }
+    
+    .dot5 {
+        left: 16%;
+    }
+    .dot6 {
+        left: 20%;
     }
 }
 
@@ -342,31 +364,36 @@ h3 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
+        width: 125px;
+        height: 125px;
+        font-size: 10px;
+    }
     .dot1 {
-        left: 2%;
+        left: 4%;
     }
     .dot2 {
-        left: 2%;
+        left: 8%;
     }
     .dot3 {
-        left: 2%;
+        left: 10%;
     }
     .dot4 {
-        left: 2%;
+        left: 12%;
     }
     .dot5 {
-        left: 2%;
+        left: 15%;
     }
     .dot6 {
-        left: 2%;
+        visibility: hidden;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     #page3 {
-        height: 1350px;
+        height: 700px;
     }
-    .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
+    .dot1, .dot2, .dot3 {
         top: 0;
         left: 0;
         width: 175px;
@@ -380,13 +407,16 @@ h3 {
     .numberForDots {
         font-size: 15px;
     }
+    .dot4, .dot5, .dot6 {
+        visibility: hidden;
+    }
 }
 
 @media only screen and (max-width: 576px) {
     #page3 {
-        height: 1350px;
+        height: 700px;
     }
-    .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
+    .dot1, .dot2, .dot3 {
         top: 0;
         left: 0;
         width: 175px;
@@ -399,6 +429,9 @@ h3 {
     }
     .numberForDots {
         font-size: 15px;
+    }
+    .dot4, .dot5, .dot6 {
+        visibility: hidden;
     }
 }
 
