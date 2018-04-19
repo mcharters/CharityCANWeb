@@ -44,6 +44,10 @@ h3 {
 
 /*-----------------------------------------------------------Header----------------------------------------------------------*/
 
+.navbar-light {
+    background-color: #F8F8F8 !important;
+}
+
 .navbar-brand {
     font-size: 25px !important;
     color: #00849b !important;
@@ -66,10 +70,46 @@ h3 {
     width: 150px;
 }
 
+/*-----------------------------------------------------------Methodology----------------------------------------------------------*/
+
+#methodology {
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+
+.square {
+    width: 90%;
+    height: auto;
+    background-color: white;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0 2px 5px #8B8B8B;
+}
+
+#methodology p {
+    margin: 15px;
+    line-height: 25px;
+}
+
+.info {
+    color: #00333C;
+}
+
+.square-top {
+    background-color: #00849b;
+    color: white !important;
+}
+
+@media only screen and (max-width: 576px) {
+    #methodology {
+        padding-top: 150px;
+    }
+}
+
 /*-----------------------------------------------------------Page 1----------------------------------------------------------*/
 
 #page1 {
-    margin-top: 100px;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -87,14 +127,13 @@ h3 {
     height: 80% !important;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
     #page1 {
-        margin-top: 150px;
         margin-left: 0;
         margin-right: 0;
     }
     .google-maps {
-        height: 400px;
+        height: 450px;
     }
 }
 /*-----------------------------------------------------------Page 2----------------------------------------------------------*/
@@ -103,12 +142,16 @@ h3 {
     height: 100px;
     width: 100%;
     fill: #00849b;
+    position: relative;
+    bottom: -0.5px;
 }
 
 .triangle2 {
     height: 100px;
     width: 100%;
     fill: #00849b;
+    position: relative;
+    top: -0.5px;
 }
 
 #page2 {
@@ -117,6 +160,7 @@ h3 {
     background-color: #00849b;
     padding-left: 5%;
     padding-right: 5%;
+    padding-top: 3%;
 }
 
 #page2 h1, #page2 h2, #page2 h3 {
@@ -124,11 +168,12 @@ h3 {
 }
 
 #page2 h2 {
-    font-size: 25px;
+    font-size: 30px;
 }
 
-#page2 h3 {
-    font-size: 18px !important;
+#page2 span {
+    font-size: 20px;
+    color: #00333C;
 }
 
 @media only screen and (max-width: 576px) {
@@ -165,6 +210,7 @@ h3 {
 #large-dot {
     position: relative;
     background-color: #86C7EE;
+    box-shadow: inset -25px -25px 40px rgba(0,132,155,.2);
     border-radius: 50%;
     display: inline-block;
 
@@ -185,7 +231,6 @@ h3 {
 
 .dot1 {
     top: 15%;
-    left: 10%;
     width: 175px;
     height: 175px;
     font-size: 20px;
@@ -193,26 +238,85 @@ h3 {
 
 .dot2 {
     top: 50%;
-    left: 20%;
+    width: 150px;
+    height: 150px;
+    font-size: 14px;
+}
+
+.dot3 {
+    top: 10%;
+    width: 200px;
+    height: 200px;
+    font-size: 22px;
+}
+
+.dot4 {
+    top: 55%;
+    width: 125px;
+    height: 125px;
+    font-size: 10px;
+}
+
+.dot5 {
+    top: 15%;
     width: 150px;
     height: 150px;
     font-size: 15px;
 }
 
-.dot3 {
-    top: 10%;
-    left: 35%;
-    width: 200px;
-    height: 200px;
-    font-size: 25px;
+.dot6 {
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    font-size: 10px;
 }
 
-.dot4 {
-    top: 50%;
-    left: 40%;
-    width: 125px;
-    height: 125px;
-    font-size: 12px;
+.numberForDots {
+    font-size: 28px;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 2000px) {
+    .dot1 {
+        left: 15%;
+    }
+    .dot2 {
+        left: 15%;
+    }
+    .dot3 {
+        left: 25%;
+    }
+    .dot4 {
+        left: 25%;
+    }
+    
+    .dot5 {
+        left: 35%;
+    }
+    .dot6 {
+        left: 35%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .dot1 {
+        left: 15%;
+    }
+    .dot2 {
+        left: 15%;
+    }
+    .dot3 {
+        left: 25%;
+    }
+    .dot4 {
+        left: 25%;
+    }
+    
+    .dot5 {
+        left: 35%;
+    }
+    .dot6 {
+        left: 35%;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -220,36 +324,49 @@ h3 {
         left: 5%;
     }
     .dot2 {
-        left: 10%;
+        left: 2%;
     }
     .dot3 {
-        left: 20%;
+        left: 7%;
     }
     .dot4 {
-        left: 30%;
+        left: 2%;
+    }
+    
+    .dot5 {
+        left: 9%;
+    }
+    .dot6 {
+        left: 2%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     .dot1 {
-        left: 5%;
+        left: 2%;
     }
     .dot2 {
-        left: 5%;
+        left: 2%;
     }
     .dot3 {
-        left: 10%;
+        left: 2%;
     }
     .dot4 {
-        left: 10%;
+        left: 2%;
+    }
+    .dot5 {
+        left: 2%;
+    }
+    .dot6 {
+        left: 2%;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
     #page3 {
-        height: 900px;
+        height: 1350px;
     }
-    .dot1, .dot2, .dot3, .dot4 {
+    .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
         top: 0;
         left: 0;
         width: 175px;
@@ -260,13 +377,16 @@ h3 {
         margin-top: 40px;
         display: block;
     }
+    .numberForDots {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (max-width: 576px) {
     #page3 {
-        height: 900px;
+        height: 1350px;
     }
-    .dot1, .dot2, .dot3, .dot4 {
+    .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
         top: 0;
         left: 0;
         width: 175px;
@@ -277,6 +397,9 @@ h3 {
         margin-top: 40px;
         display: block;
     }
+    .numberForDots {
+        font-size: 15px;
+    }
 }
 
 /*-----------------------------------------------------------Page 4----------------------------------------------------------*/
@@ -285,19 +408,38 @@ h3 {
     height: 100px;
     width: 100%;
     fill: #00849b;
-    margin-bottom: -6px;
+    position: relative;
+    bottom: -0.5px;
 }
 
 .triangle4 {
     height: 100px;
     width: 100%;
     fill: #00849b;
+    position: relative;
+    top: -0.5px;
 }
 
 #page4 {
     width: 100%;
     height: 700px;
     background-color: #00849b;
+}
+
+.donutcharttext1, .donutcharttext2, .donutcharttext3 {
+    color: white;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: -100px;
+}
+
+.donutcharttext1 span, .donutcharttext2 span, .donutcharttext3 span {
+    font-size: 20px;
+    color: #00333C;
+}
+
+.donutcharttext2, .donutcharttext3 {
+    display: none;
 }
 
 #donutchart1, #donutchart2, #donutchart3 {
@@ -312,7 +454,7 @@ h3 {
 
 @media only screen and (max-width: 576px) {
     #donutchart1, #donutchart2, #donutchart3 {
-        zoom: 0.4;
+        zoom: 0.5;
         margin-left: 30%;
     }
     #page4 {
@@ -330,6 +472,18 @@ h3 {
     .panelControlBtn {
         width: 23% !important;
     }
+    .donutcharttext1, .donutcharttext2, .donutcharttext3 {
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: -40px;
+    }
+
+    .donutcharttext1 span, .donutcharttext2 span, .donutcharttext3 span {
+        font-size: 12px;
+    }
+    .panelControlBtn {
+        font-size: 8px;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
@@ -343,6 +497,18 @@ h3 {
         font-size: 12px;
         height: 40px !important;
     }
+    .donutcharttext1, .donutcharttext2, .donutcharttext3 {
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: -50px;
+    }
+
+    .donutcharttext1 span, .donutcharttext2 span, .donutcharttext3 span {
+        font-size: 12px;
+    }
+    .panelControlBtn {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -355,6 +521,18 @@ h3 {
     }
     .buttons span {
         font-size: 12px;
+    }
+    .donutcharttext1, .donutcharttext2, .donutcharttext3 {
+        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: -80px;
+    }
+
+    .donutcharttext1 span, .donutcharttext2 span, .donutcharttext3 span {
+        font-size: 15px;
+    }
+    .panelControlBtn {
+        font-size: 14px;
     }
 }
 
@@ -374,19 +552,42 @@ h3 {
     margin-left: 25%;
 }
 
-.panelControlBtn {
+button.off { 
     width: 20%;
-    height: 10px;
+    height: 25px;
     display: inline-block;
     transition-duration: 0.4s;
     cursor: pointer;
     background-color: #EDEDED;
-    color: white;
+    color: #00849b;
+    border: none;
+}
+
+button.on { 
+    opacity: 0.7;
+}
+
+.panelControlBtn {
+    width: 20%;
+    height: 25px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #EDEDED;
+    color: #00849b;
     border: none;
 }
 
 .panelControlBtn:hover {
-    opacity: 0.5;
+    opacity: 0.7;  
+}
+
+.panelControlBtn:focus {
+    opacity: 0.7;
+}
+
+.panelControlBtn:active {
+    opacity: 0.7;
 }
 
 .buttons span {
@@ -421,6 +622,7 @@ h3 {
     margin-left: 5%;
     margin-top: 50px;
     overflow: hidden;
+    color: #00333C;
 }
 
 #page5 div {
@@ -430,14 +632,17 @@ h3 {
 #myTable {
     font-family: 'Rubik', 'Roboto', 'Trebuchet MS', sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 99.9%;
     font-size: 12px;
 }
 
 #myTable td, #myTable th {
     font-family: 'Rubik', 'Roboto', 'Trebuchet MS', sans-serif;
-    border: 1px solid #ddd;
-    padding: 2px;
+    border: 1px solid #C0C0C0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #myTable tr:nth-child(even){
@@ -484,6 +689,7 @@ input[type=search]{
     width: 100%;
     height: 100px;
     margin: 0;
+    margin-top: 2%;
     padding: 0;
     padding-top: 30px;
     text-decoration: none;
