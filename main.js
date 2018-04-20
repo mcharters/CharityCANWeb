@@ -279,9 +279,14 @@ $(document).ready(() => {
     //Sets up filtering and search for table
     $('#myTable').DataTable({
         responsive: true,
-        "columnDefs": [
-            { "orderable": false, "targets": 3 }
-        ],
+        "columnDefs": [{
+            "orderable": false,
+            "targets": [2, 3, 11]
+        }],
+        "columnDefs": [{
+            "type": "num",
+            "targets": [0, 1, 4, 5, 6, 7, 8, 9]
+        }],
         //This function adds the Category column filter dropdown
         initComplete: function() {
             this.api().columns(3).every(function() {
