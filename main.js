@@ -117,15 +117,6 @@ $(document).ready(() => {
         
         var data = response.getDataTable();
         var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
-//        google.visualization.events.addListener(chart, 'ready', function () {
-//          Array.prototype.forEach.call(container.getElementsByTagName('text'), function(label) {
-//            if (label.innerHTML === options.title) {
-//              var subtitle = label.parentNode.appendChild(label.cloneNode(true));
-//              subtitle.innerHTML = 'Subtitle';
-//              subtitle.setAttribute('y', parseFloat(label.getAttribute('y')) + 20);
-//            }
-//          });
-//        });
         chart.draw(data, options);
     }
     
@@ -271,6 +262,7 @@ $(document).ready(() => {
         }
     });
     
+    //Determines whether the button is activated or not
     $('button').on("click", function() {
         $('button').removeClass('on').addClass('off');
             $(this).removeClass('off').addClass('on');
@@ -279,14 +271,12 @@ $(document).ready(() => {
     //Sets up filtering and search for table
     $('#myTable').DataTable({
         responsive: true,
-        "columnDefs": [{
-            "orderable": false,
-            "targets": [2, 3, 11]
-        }],
-        "columnDefs": [{
-            "type": "num",
-            "targets": [0, 1, 4, 5, 6, 7, 8, 9]
-        }],
+        columnDefs: [
+            //No arrow for ordering highest to lowest on these columns
+            {targets: [2, 3, 11], orderable: false},
+            //Orders these columns by number (eg. 1,2,3)
+            {targets: [0, 1], type: 'num'}
+        ],
         //This function adds the Category column filter dropdown
         initComplete: function() {
             this.api().columns(3).every(function() {
@@ -318,6 +308,7 @@ $(document).ready(() => {
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
             $('html, body').animate({
+                //Scrolls to 60px above the section id
               scrollTop: target.offset().top-60
             }, 750);
             return false;
@@ -362,6 +353,7 @@ $(document).ready(() => {
         duration: 500,
         origin: 'left',
         distance: '300px',
+        //Only reveals when you've seen 50% of the section class
         viewFactor: 0.5
     });
     sr.reveal('object', {
