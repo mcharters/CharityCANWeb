@@ -488,7 +488,7 @@ h3 {
 @media only screen and (max-width: 576px) {
     #donutchart1, #donutchart2, #donutchart3 {
         zoom: 0.5;
-        margin-left: 30%;
+        margin-left: 25%;
     }
     #page4 {
         height: 350px;
@@ -524,7 +524,7 @@ h3 {
         zoom: 0.5;
     }
     #page4 {
-        height: 350px;
+        height: 375px;
     }
     .buttons span {
         font-size: 12px;
@@ -550,7 +550,7 @@ h3 {
         margin-left: 30%;
     }
     #page4 {
-        height: 450px;
+        height: 475px;
     }
     .buttons span {
         font-size: 12px;
@@ -583,6 +583,7 @@ h3 {
 
 .buttons {
     margin-left: 25%;
+    height: 35px;
 }
 
 button.off { 
@@ -609,10 +610,12 @@ button.on {
     background-color: #EDEDED;
     color: #00849b;
     border: none;
+    border-radius: 3px;
+    box-shadow: 0 3px 5px #005867;
 }
 
 .panelControlBtn:hover {
-    opacity: 0.7;  
+    opacity: 0.7;
 }
 
 .panelControlBtn:focus {
@@ -621,15 +624,6 @@ button.on {
 
 .panelControlBtn:active {
     opacity: 0.7;
-}
-
-.buttons span {
-    text-align: center;
-    color: #EDEDED;
-    width: 20%;
-    height: 25px;
-    display: inline-block;
-    overflow: hidden;
 }
 
 /*-----------------------------------------------------------Page 5----------------------------------------------------------*/
