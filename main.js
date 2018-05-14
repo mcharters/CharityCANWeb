@@ -1,17 +1,17 @@
 $(document).ready(() => {
 /*-----------------------------------------------------------Donut Charts----------------------------------------------------------*/
     google.charts.load("current", {packages:["corechart"]});
-    
+
     google.charts.setOnLoadCallback(drawBarChart1);
     google.charts.setOnLoadCallback(drawPieChart1);
     google.charts.setOnLoadCallback(drawDonutChart1);
     google.charts.setOnLoadCallback(drawDonutChart2);
     google.charts.setOnLoadCallback(drawDonutChart3);
-    
+
     //Bar chart on second page
     function drawBarChart1() {
-        var queryString = encodeURIComponent('SELECT A, B, C LIMIT 6 OFFSET 0');
-        
+        var queryString = encodeURIComponent('SELECT A, M LIMIT 6 OFFSET 0');
+
         var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/105l5L5a_P-PcLCu5g8BPEXAELcfO7Hh9VuxUrpkIq4U/gviz/tq?sheet=SheetNewVersion&headers=1&tq=' + queryString);
         query.send(handleQueryResponseTaxGifts);
     }
@@ -21,11 +21,11 @@ $(document).ready(() => {
             alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
             return;
         }
-        
-        var options = { 
+
+        var options = {
             height: 300,
             backgroundColor: 'transparent',
-            colors: ['#005d6d', '#38a9b9'],
+            colors: ['#38a9b9'],
             legend: {
                 textStyle: {color: 'white', fontSize: 12},
                 position: 'top',
@@ -35,15 +35,15 @@ $(document).ready(() => {
                 textStyle:{color: '#FFF'}
             },
             vAxis: {
-                textStyle:{color: '#FFF'}
+                textStyle:{color: '#FFF', 'format': 'short'}
             }
         }
-        
+
         var data = response.getDataTable();
         var chart = new google.visualization.ColumnChart(document.getElementById('barchart1'));
         chart.draw(data, options);
     }
-    
+
     //Pie chart on second page
     function drawPieChart1() {
         var queryString = encodeURIComponent('SELECT A, L LIMIT 6 OFFSET 0');
@@ -57,7 +57,7 @@ $(document).ready(() => {
             alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
             return;
         }
-        
+
         var options = {
             height: 300,
             backgroundColor: 'transparent',
@@ -72,7 +72,7 @@ $(document).ready(() => {
         var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
         chart.draw(data, options);
     }
-    
+
     //First donut chart on fourth page
     function drawDonutChart1() {
         var queryString = encodeURIComponent('SELECT A, E LIMIT 6 OFFSET 0');
@@ -114,12 +114,12 @@ $(document).ready(() => {
                 position: 'right'
             }
         }
-        
+
         var data = response.getDataTable();
         var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
         chart.draw(data, options);
     }
-    
+
     //Second donut chart on fourth page
     function drawDonutChart2() {
     var queryString = encodeURIComponent('SELECT A, D LIMIT 5 OFFSET 0');
@@ -157,7 +157,7 @@ $(document).ready(() => {
                 textStyle: {color: 'white', fontSize: 12}
             }
         }
-        
+
         var data = response.getDataTable();
         var chart = new google.visualization.PieChart(document.getElementById('donutchart2'));
 
@@ -167,7 +167,7 @@ $(document).ready(() => {
 
         chart.draw(data, options);
     }
-    
+
     //Third donut chart on fourth page
     function drawDonutChart3() {
         var queryString = encodeURIComponent('SELECT A, H LIMIT 5 OFFSET 0');
@@ -205,7 +205,7 @@ $(document).ready(() => {
                 textStyle: {color: 'white', fontSize: 12}
             }
         }
-        
+
         var data = response.getDataTable();
         var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
 
@@ -215,9 +215,9 @@ $(document).ready(() => {
 
         chart.draw(data, options);
     }
-    
+
 /*-----------------------------------------------------------Functions----------------------------------------------------------*/
-    
+
     //Adds shadow to navbar when scrolled past it's original position
     $(window).scroll(function(){
         if($(document).scrollTop() > 0) {
@@ -226,7 +226,7 @@ $(document).ready(() => {
             $(".navbar").css("box-shadow", "none");
         }
     });
-    
+
     //Displays scrollToTop button if the page is scrolled past 100px
     $(window).scroll(function(){
         if($(document).scrollTop() > 100) {
@@ -240,14 +240,14 @@ $(document).ready(() => {
         $('html, body').animate({scrollTop : 0}, 800);
         return false;
     });
-    
+
     //Increases dot size on hover
     $('#dot-expand').hover(function(){
         $(this).addClass('transition');
     },function(){
-        $(this).removeClass('transition');   
+        $(this).removeClass('transition');
     });
-    
+
     //Switches the Google Chart visible on button click
     var currentButton = 1;
     $('.panelControlBtn').on("click", function() {
@@ -261,13 +261,13 @@ $(document).ready(() => {
         currentButton = ID;
         }
     });
-    
+
     //Determines whether the button is activated or not
     $('button').on("click", function() {
         $('button').removeClass('on').addClass('off');
             $(this).removeClass('off').addClass('on');
     });
-    
+
     //Sets up filtering and search for table
     $('#myTable').DataTable({
         responsive: true,
@@ -299,7 +299,7 @@ $(document).ready(() => {
             });
         }
     });
-    
+
     //Smooth scrolling animations
     $(function() {
       $('a[href*="#"]:not([href="#"])').click(function() {
@@ -316,7 +316,7 @@ $(document).ready(() => {
         }
       });
     });
-    
+
     //Reveals elements as the user scrolls
     window.sr = ScrollReveal();
     sr.reveal('.navbar', {

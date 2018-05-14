@@ -5,19 +5,19 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>CharityCAN Top 1000</title>
         <link rel="icon" href="https://charitycan.ca/wp-content/uploads/2017/08/charitycan-favicon.png">
-        
+
         <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <!--DataTables library adds filtering to table-->
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
     </head>
-    
+
     <body>
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
             <a href="https://charitycan.ca/" target="_blank"><img class="logo" src="https://charitycan.ca/wp-content/uploads/2017/08/charitycan-logo.svg"></a>&nbsp;&nbsp;
             <a class="navbar-brand" href="#">Canada's Top 1000 Charities</a>
-            
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,65 +36,79 @@
                 </ul>
             </div>
         </nav>
-        
+
         <section id="methodology">
             <div class="square">
-                <div class="square-top"><p>What is this all about?</p></div>
-                <p class="info">CharityCAN is Canada's premier prospect research, donor identification and relationship mapping platform. We created this interactive website as an inside look on some of the statistics that CharityCAN has collected for the top 1000 charities in Canada from 2017. At CharityCAN, we are guided by the idea that prospect research can be made more efficient through data. The datasets in CharityCAN are carefully selected to give our users the ability to find useful, meaningful, and accurate information about the people, companies, and charities they are researching.</p>
+                <div class="square-top"><p>What is the Top 1000 Charity Report?</p></div>
+                <p class="info">
+                  Every year, <a href="https://charitycan.ca">CharityCAN</a> partners with <a href="https://www.theglobeandmail.com/report-on-business/top-100-non-profit-organizations-registered-charities/article34067186/">The Globe and Mail</a>
+                  to produce a ranking of the top 1000 non-profit organizations in Canada, based on public tax filings from each organization in the calendar year.
+                </p>
+                <p>
+                  In previous years we ranked charities by total revenue, but for 2017 we've ranked them by the number of tax-receipted gifts received by each charity. That is, the number of donation dollars
+                  each charity has received where they issued a tax receipt. We thought this would give a better picture of the top charities working in fundraising today.
+                </p>
+                <p>
+                  Scroll down to see where these top 1000 charities are located, some breakdowns in the data for these top charities, and a full ranking table of each charity in the list along with their
+                  position from last year. If you have any questions or comments, please <a href="https://charitycan.ca/contact">get in touch!</a>
+                </p>
             </div>
         </section>
-        
+
         <section id='page1'>
             <div class="google-maps">
                 <iframe src="https://www.google.com/maps/d/embed?mid=1S_voBgKQ05ib1ucZnEaIbrRVaRZgLR2_" frameborder="0" style="border:0"></iframe>
             </div>
         </section>
-        
+
         <div id="triangle">
             <svg class="triangle1" viewBox="0 0 100 100"  preserveAspectRatio="none">
                 <polygon points="0,0 100,100 0,100"/>
             </svg>
         </div>
-        
+
         <section id='page2'>
             <div class="category-stats">
-                <h1 align="center">Category Stats</h1>
+                <h1 align="center">Category Breakdown</h1>
 
                 <row class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center img-responsive float-right">
-                    <h2>2016 - 2017 Tax Gifts</h2>
-                    <span>The top 1000 charities received C$15.7 billion tax-receipted gifts in 2016 and 2017</span>
-                    <div id="barchart1" class="text-center"></div> 
+                    <h2>Donations Received by Category</h2>
+                    <span>The top 1000 charities reported C$7.4 billion in tax-receipted gifts in 2017</span>
+                    <div id="barchart1" class="text-center"></div>
                 </row>
 
                 <row class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center img-responsive float-left">
                     <h2>Number of Charities per Category</h2>
-                    <span>Education is the category with the most financial support</span>
+                    <span>Religious organizations make up the largest number of charities in the list</span>
                     <div id="piechart1" class="text-center"></div>
                 </row>
             </div>
         </section>
-        
+
         <div id="triangle">
             <svg class="triangle2" viewBox="0 0 100 100"  preserveAspectRatio="none">
                 <polygon points="100,0 100,100 0,0"/>
             </svg>
         </div>
-        
+
         <section id='page3'>
-            <span id="large-dot" class="dot1"><p><span class="numberForDots">45.8 B</span><br>Revenue</p></span>
-            <span id="large-dot" class="dot2"><p><span class="numberForDots">42.2 B</span><br>Total Expenditures</p></span>
-            <span id="large-dot" class="dot3"><p><span class="numberForDots">7.4 B</span><br>Tax-Receipted Gifts</p></span>
-            <span id="large-dot" class="dot4"><p><span class="numberForDots">113.3 B</span><br>Net Assets</p></span>
+            <row class="col-xs-12 text-center">
+              <h2>Top 1000 Totals</h2>
+            </row>
+            <span id="large-dot" class="dot1"><p><span class="numberForDots">$45.8 B</span><br>Revenue</p></span>
+            <span id="large-dot" class="dot2"><p><span class="numberForDots">$42.2 B</span><br>Total Expenditures</p></span>
+            <span id="large-dot" class="dot3"><p><span class="numberForDots">$7.4 B</span><br>Tax-Receipted Gifts</p></span>
+            <span id="large-dot" class="dot4"><p><span class="numberForDots">$113.3 B</span><br>Net Assets</p></span>
             <span id="large-dot" class="dot5"><p><span class="numberForDots">400 K</span><br>Employees</p></span>
-            <span id="large-dot" class="dot6"><p><span class="numberForDots">21 B</span><br>Salaries</p></span>
+            <span id="large-dot" class="dot6"><p><span class="numberForDots">$21 B</span><br>Salaries</p></span>
         </section>
-        
+
         <div id="triangle">
             <svg class="triangle3" viewBox="0 0 100 100"  preserveAspectRatio="none">
                 <polygon points="100,100 100,0 0,100"/>
             </svg>
         </div>
-        
+
         <section id='page4'>
             <div class='donut-charts'>
                 <div class="donutchart donutcharttext1" align="center">Total Expenditures<br><span>The top 1000 charities spent C$42.2 B last year</span></div>
@@ -103,7 +117,7 @@
                 <div class="donutchart" id="donutchart2"></div>
                 <div class="donutchart donutcharttext3" align="center">Salaries and Wages<br><span>The top 1000 charities spent C$20.9 B on wages last year</span></div>
                 <div class="donutchart" id="donutchart3"></div>
-                
+
                 <div class='buttons'>
                     <button class="panelControlBtn on" data-id="1">Expenditures</button>
                     <button class="panelControlBtn" data-id="2">Revenue</button>
@@ -111,18 +125,18 @@
                 </div>
             </div>
         </section>
-        
+
         <div id="triangle">
             <svg class="triangle4" viewBox="0 0 100 100"  preserveAspectRatio="none">
                 <polygon points="0,0 100,0 0,100"/>
             </svg>
         </div>
-        
+
         <section id="page5">
             <h1>Top 1000 Charities in Canada</h1>
             <object type="text/html" data="table.html"></object>
         </section>
-        
+
         <section id="footer">
             <div class="footer-links">
                 <a href="https://charitycan.ca/about/">About</a> |
@@ -130,12 +144,12 @@
                 <a href="https://charitycan.ca/terms/">Terms of Use</a> |
                 <a href="https://charitycan.ca/privacy/">Privacy Policy</a>
             </div>
-            
+
             <p class="footer-copy">&copy; CharityCAN 2018</p>
         </section>
-        
+
         <a href="#" class="scrollToTop"></a>
-        
+
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <!--Loads Google Chart library-->
